@@ -1,0 +1,21 @@
+# use Docker-based container (instead of OpenVZ)
+sudo: false
+
+cache:
+  directories:
+    - $HOME/.m2/repository
+
+language: scala
+
+jdk:
+  - oraclejdk8
+
+scala:
+  - 2.12.3
+
+script:
+  - mvn test
+
+notifications:
+  email:
+    - michel@daviot.info

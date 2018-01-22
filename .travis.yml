@@ -12,7 +12,7 @@ jdk:
   - oraclejdk8
 
 scala:
-  - 2.12.3
+  - 2.12.4
 
 script:
   - mvn test

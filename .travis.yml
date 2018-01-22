@@ -4,6 +4,7 @@ sudo: false
 cache:
   directories:
     - $HOME/.m2/repository
+    - $HOME/.ivy2/cache
 
 language: scala
 
@@ -15,6 +16,7 @@ scala:
 
 script:
   - mvn test
+  - sbt test
 
 notifications:
   email:

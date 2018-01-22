@@ -6,7 +6,7 @@
 
     <groupId>kata</groupId>
     <version>0.1-SNAPSHOT</version>
-    <artifactId>remote-session</artifactId>
+    <artifactId>scala-template</artifactId>
 
     <packaging>jar</packaging>
 

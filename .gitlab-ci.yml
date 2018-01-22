@@ -1,5 +1,12 @@
-image: maven:3.5.0-jdk-8
- 
-scalatest:
+mvtScalaTest:
+  image: maven:3.5.0-jdk-8
+  stage: test
   script:
     - mvn test
+
+
+sbtScalaTest:
+  image: hseeberger/scala-sbt
+  stage: test
+  script:
+  - sbt test

@@ -1,9 +1,10 @@
-mvtScalaTest:
+mvnScalaTest:
   image: maven:3.5.0-jdk-8
   stage: test
   script:
     - mvn test
   cache:
+    key: "mvn-$CI_BUILD_REF_NAME" # contains either the branch or the tag, so it's caching per branch
     paths:
       - ~/.m2/cache
 
@@ -13,7 +14,7 @@ sbtScalaTest:
   script:
   - sbt test
   cache:
-    key: "$CI_BUILD_REF_NAME" # contains either the branch or the tag, so it's caching per branch
+    key: "sbt-$CI_BUILD_REF_NAME" # contains either the branch or the tag, so it's caching per branch
     paths:
     - "sbt-cache/.ivy"
     - "sbt-cache/.boot"

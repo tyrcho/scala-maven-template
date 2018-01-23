@@ -18,7 +18,7 @@ sbtScalaTest:
   cache:
     key: "sbt-$CI_BUILD_REF_NAME" # contains either the branch or the tag, so it's caching per branch
     paths:
-    - "sbt-cache/.ivy"
+    - "sbt-cache/.ivy/cache"
     - "sbt-cache/.boot"
     - "sbt-cache/.sbtboot"
     - "sbt-cache/target"  

@@ -18,5 +18,6 @@ sbtScalaTest:
     - "sbt-cache/.ivy.cache"
     - "sbt-cache/.boot"
     - "sbt-cache/.sbtboot"
-    - "sbt-cache/target"  variables:
+    - "sbt-cache/target"  
+  variables:
     SBT_OPTS: "-Dsbt.global.base=sbt-cache/.sbtboot -Dsbt.boot.directory=sbt-cache/.boot -Dsbt.ivy.home=sbt-cache/.ivy"

@@ -3,10 +3,15 @@ mvtScalaTest:
   stage: test
   script:
     - mvn test
-
+  cache:
+    paths:
+      - ~/.ivy2/cache
 
 sbtScalaTest:
   image: hseeberger/scala-sbt
   stage: test
   script:
   - sbt test
+  cache:
+    paths:
+      - ~/.m2/repository

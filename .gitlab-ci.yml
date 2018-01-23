@@ -6,8 +6,10 @@ mvnScalaTest:
   cache:
     key: "mvn-$CI_BUILD_REF_NAME" # contains either the branch or the tag, so it's caching per branch
     paths:
-      - ~/.m2/cache
-
+      - .m2/cache
+  variables:
+    MAVEN_OPTS: "-Dmaven.repo.local=.m2"
+    
 sbtScalaTest:
   image: hseeberger/scala-sbt
   stage: test

@@ -11,16 +11,17 @@ scala:
 
 script:
   - sbt test
-  - export MAVEN_OPTS="-Dmaven.repo.local=$(pwd)/mvn-cache" # must be an absolute path for maven
-  - mvn test
+  - MAVEN_OPTS="-Dmaven.repo.local=$(pwd)/mvn-cache" bash -c 'mvn test' 
+  # maven.repo.local must be an absolute path 
 
 notifications:
   email:
     - michel@daviot.info
 
 env:
-  - SBT_OPTS= "-Dsbt.global.base=sbt-cache/sbtboot -Dsbt.boot.directory=sbt-cache/boot -Dsbt.ivy.home=sbt-cache/ivy"
-  - COURSIER_CACHE= "sbt-cache/coursier"
+  global:
+    - SBT_OPTS="-Dsbt.global.base=sbt-cache/sbtboot -Dsbt.boot.directory=sbt-cache/boot -Dsbt.ivy.home=sbt-cache/ivy"
+    - COURSIER_CACHE="sbt-cache/coursier"
 
 cache:
   directories:

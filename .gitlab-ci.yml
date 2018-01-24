@@ -8,7 +8,7 @@ mvnScalaTest:
     paths:
       - .m2/cache
   variables:
-    MAVEN_OPTS: "-Dmaven.repo.local=.m2"
+    MAVEN_OPTS: "-Dmaven.repo.local=$(pwd)/.m2" # must be an absolute path
     
 sbtScalaTest:
   image: hseeberger/scala-sbt

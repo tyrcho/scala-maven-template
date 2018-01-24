@@ -2,15 +2,14 @@ mvnScalaTest:
   image: maven:3.5.0-jdk-8
   stage: test
   script:
+    - export MAVEN_OPTS="-Dmaven.repo.local=$(pwd)/mvn-cache" # must be an absolute path for maven
     - mvn test
   cache:
     key: "mvn-$CI_BUILD_REF_NAME" # contains either the branch or the tag, so it's caching per branch
     paths:
-    - .m2
+    - mvn-cache
     - target # might need to use mvn clean test for slower but more reproducible builds
-  variables:
-    MAVEN_OPTS: "-Dmaven.repo.local=$(pwd)/.m2" # must be an absolute path
-    
+
 sbtScalaTest:
   image: 1science/sbt:0.13-oracle-jdk-8
   stage: test

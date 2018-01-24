@@ -12,7 +12,7 @@ mvnScalaTest:
     MAVEN_OPTS: "-Dmaven.repo.local=$(pwd)/.m2" # must be an absolute path
     
 sbtScalaTest:
-  image: hseeberger/scala-sbt
+  image: 1science/sbt:0.13-oracle-jdk-8
   stage: test
   script:
   - sbt test

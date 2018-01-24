@@ -1,11 +1,6 @@
 # use Docker-based container (instead of OpenVZ)
 sudo: false
 
-cache:
-  directories:
-    - $HOME/.m2/repository
-    - $HOME/.ivy2/cache
-
 language: scala
 
 jdk:
@@ -15,9 +10,19 @@ scala:
   - 2.12.4
 
 script:
-  - mvn test
   - sbt test
+  - export MAVEN_OPTS="-Dmaven.repo.local=$(pwd)/mvn-cache" # must be an absolute path for maven
+  - mvn test
 
 notifications:
   email:
     - michel@daviot.info
+
+env:
+  - SBT_OPTS= "-Dsbt.global.base=sbt-cache/sbtboot -Dsbt.boot.directory=sbt-cache/boot -Dsbt.ivy.home=sbt-cache/ivy"
+  - COURSIER_CACHE= "sbt-cache/coursier"
+
+cache:
+  directories:
+    - sbt-cache
+    - mvn-cache

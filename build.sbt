@@ -1,5 +1,5 @@
 name := "scala template"
 
-scalaVersion := "2.12.4"
+scalaVersion := "2.12.5"
 
-libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.4" % "test"
+libraryDependencies += "org.scalatest" %% "scalatest" % "3.0.5" % "test"

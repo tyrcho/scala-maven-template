@@ -12,7 +12,7 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <scala.version>2.12.4</scala.version>
+        <scala.version>2.12.5</scala.version>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
@@ -29,7 +29,7 @@
         <dependency>
             <groupId>org.scalatest</groupId>
             <artifactId>scalatest_2.12</artifactId>
-            <version>3.0.4</version>
+            <version>3.0.5</version>
             <scope>test</scope>
         </dependency>
 

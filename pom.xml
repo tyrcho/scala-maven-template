@@ -12,9 +12,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <scala.version>2.12.8</scala.version>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <scala.version>2.13.0</scala.version>
+        <maven.compiler.source>1.9</maven.compiler.source>
+        <maven.compiler.target>1.9</maven.compiler.target>
     </properties>
 
     <dependencies>
@@ -28,8 +28,8 @@
         <!-- tests -->
         <dependency>
             <groupId>org.scalatest</groupId>
-            <artifactId>scalatest_2.12</artifactId>
-            <version>3.0.5</version>
+            <artifactId>scalatest_2.13</artifactId>
+            <version>3.0.8</version>
             <scope>test</scope>
         </dependency>
 
@@ -42,7 +42,7 @@
             <plugin>
                 <groupId>net.alchim31.maven</groupId>
                 <artifactId>scala-maven-plugin</artifactId>
-                <version>4.0.2</version>
+                <version>4.1.0</version>
                 <executions>
                     <execution>
                         <id>scala-compile</id>

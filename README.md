@@ -13,4 +13,9 @@
 * Can be imported in Eclipse (maven project) or IntelliJ (either as Maven or sbt project)
 
 
+## Note
+
+This project is edited on
+[Github](https://github.com/tyrcho/scala-maven-template)
+with automatic synchronisation on [Gitlab](https://gitlab.com/tyrcho/scala-maven-template)
 
